@@ -6,32 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cricket</title>
     <style>
-        .box{
-            width: 800px;
-            height: 500px;
-            border: 2px solid rebeccapurple;
+        .field{
+            border: 1px solid;
         }
-        .bat:hover{
-            transform: rotate(-60deg);
-            transform-origin: top right;
-        }
-        .ball{
-            position: relative;
-            left: 100px;
-            width: 50px;
-            height: 50px;
-            border-radius: 25px;
-            background-color: red;
-        }
+       .field:hover .bat{
+           transform: rotate(-60deg);
+           transform-origin: top right;
+       }
+       .ball{
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           background-color: red;
+           position: relative;
+           left: 515px;
+           transition: transform 1s ease-out .3s ;
+       }
+       .bat{
+           transition: transform .2s ease-in;
+       }
+       .field:hover .ball{
+           transform: translate(780px, -200px);
+       }
     </style>
 </head>
 <body>
-    <div class="box">
+   <div class="field">
         <img class="bat" src="/bat.png" alt="">
-        
         <div class="ball">
 
         </div>
-    </div>
+   </div>
+   
 </body>
 </html>
